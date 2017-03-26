@@ -1,5 +1,11 @@
+// Lib
+
+@import 'lib/normalize';
+
+// Global
 @import 'global/settings';
 @import 'global/layout';
+
+// Components
 @import 'components/navigation';
 @import 'components/footer';
-@import 'components/syntaxHighlighter';
