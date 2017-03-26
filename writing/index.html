@@ -1,0 +1,17 @@
+---
+layout: base
+title: Writing
+permalink: /writing/
+---
+
+<h2>Articles</h2>
+
+<ul>
+  {% for article in site.data.writing %}
+    <li>
+      {{ article.title }}
+      {{ article.date }}
+      {{ article.synopsis }}
+    </li>
+  {% endfor %}
+</ul>
