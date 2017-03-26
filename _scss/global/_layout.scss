@@ -9,3 +9,16 @@
 footer {
   grid-area: footer;
 }
+
+body {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "navbar main"
+                       "footer footer";
+  @media (max-width: $s) {
+   grid-template-columns: 100%;
+   grid-template-areas: "navbar"
+                        "main"
+                        "footer";
+  }
+}
