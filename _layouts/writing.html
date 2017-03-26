@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<ul>
+  <li><a href="/writing/">All</a></li>
+  <li><a href="/writing/pop-culture">Pop Culture</a></li>
+  <li><a href="/writing/tech">Tech</a></li>
+  <li><a href="/writing/politics">Politics</a></li>
+</ul>
+
+<h2>Articles</h2>
+
+<ul>
+  {% assign articles = site.data.writing | sort: 'date' | reverse %}
+  {% for article in articles %}
+    {% if article.tags contains page.tag %}
+      <li>
+        <a href="{{ article.link }}">{{ article.title }}</a>
+        <p>{{ article.date | date_to_long_string }}</p>
+        <p>{{ article.synopsis }}</p>
+        <ul>{% for tag in article.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
