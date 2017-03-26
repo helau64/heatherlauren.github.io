@@ -1,0 +1,19 @@
+$max-width: 1200px;
+$base-px: 16px;
+$s: 800px;
+
+body {
+  font-size: $base-px;
+  max-width: $max-width;
+  margin: auto auto;
+  padding: 5px 0;
+  @media (max-width: $max-width) {
+    padding: 5px 10px;
+  }
+}
+
+@mixin unlist() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
