@@ -1,18 +1,6 @@
-.navbar {
-  grid-area: navbar;
-}
-
-.main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
-body {
+.grid-container {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 80%;
   grid-template-areas: "navbar main"
                        "footer footer";
   @media (max-width: $s) {
@@ -21,4 +9,34 @@ body {
                         "main"
                         "footer";
   }
+  @supports not (display: grid) {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.navbar {
+  grid-area: navbar;
+  @supports not (display: grid) {
+    @media (min-width: $s) {
+      width: 20%;
+      float: left;
+    }
+  }
+}
+
+.main {
+  grid-area: main;
+  @supports not (display: grid) {
+    @media (min-width: $s) {
+      width: 80%;
+      float: right;
+    }
+  }
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
 }

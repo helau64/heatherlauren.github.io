@@ -17,11 +17,15 @@
   </head>
   <body>
 
-    {% include navigation.html %}
+    <div class="grid-container">
 
-    <main class="main">
-      {{ content }}
-    </main>
+      {% include navigation.html %}
+
+      <main class="main">
+        {{ content }}
+      </main>
+
+    </div>
 
     {% include footer.html %}
 
