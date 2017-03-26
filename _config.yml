@@ -6,6 +6,7 @@ email: hello@heatherlauren.me
 description: Personal site
 baseurl: ""
 url: "http://heatherlauren.github.io"
+permalink: pretty
 
 # Build settings
 markdown: kramdown
