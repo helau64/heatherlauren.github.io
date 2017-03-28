@@ -1,3 +1,28 @@
-.navbar ul {
-  @include unlist();
+.navbar {
+  padding-top: 25px;
+  ul {
+    @include unlist();
+    li {
+      padding: 10px;
+    }
+  }
+  label, input {
+    display: none;
+  }
+  @media (max-width: $s) {
+    ul {
+      position: absolute;
+      width: 100%;
+      background-color: white;
+    }
+    label, input {
+      display: block;
+    }
+    input[type=checkbox] + ul {
+      visibility: hidden;
+    }
+    input[type=checkbox]:checked + ul {
+      visibility: visible;
+    }
+  }
 }
