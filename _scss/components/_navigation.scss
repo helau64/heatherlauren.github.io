@@ -1,10 +1,7 @@
 .navbar {
   padding-top: 25px;
-  ul {
-    @include unlist();
-    li {
-      padding: 10px;
-    }
+  ul li {
+    padding: 10px;
   }
   label, input {
     display: none;
