@@ -25,9 +25,6 @@
   h3 {
     margin-top: 5px;
   }
-  footer {
-    @include border(border-right);
-  }
 }
 
 .writer {
@@ -38,12 +35,4 @@
 .developer {
   @include border(border-left);
   @include border(border-bottom);
-}
-
-.gap {
-  @include border(border-right);
-  height: 120px;
-  @media (max-width: $s) {
-    height: 150px;
-  }
 }
