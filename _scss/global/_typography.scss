@@ -1,0 +1,30 @@
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+a {
+  color: $accent;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: dotted 1px;
+  &:focus, &:active, &:hover {
+    color: #FF2F5D;
+    border-bottom: solid 1px;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 5rem;
+  @media (max-width: $s) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  @media (max-width: $s) {
+    font-size: 1.3rem;
+  }
+}
