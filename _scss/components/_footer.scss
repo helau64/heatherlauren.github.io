@@ -2,8 +2,13 @@ footer {
   position: relative;
   top: -3px;
   p {
-    padding-left: 10px;
     position: relative;
     top: 3px;
+  }
+  @media (min-width: $s) {
+    padding: 40px 5px;
+  }
+  @media (max-width: $s) {
+    padding: 30px 10px;
   }
 }
