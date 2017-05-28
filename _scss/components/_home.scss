@@ -1,0 +1,55 @@
+.home {
+  h1 {
+    @include border(border-left);
+    color: $accent;
+  }
+  h2 {
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1.5em;
+    &:first-of-type {
+      @include border(border-left);
+      padding-bottom: 0;
+    }
+    &:nth-of-type(2) {
+      @include border(border-left);
+      @include border(border-bottom);
+    }
+    @media (max-width: $s) {
+      line-height: 1.25em;
+      &:first-of-type {
+        padding-bottom: 10px;
+      }
+    }
+  }
+  h3 {
+    margin-top: 5px;
+  }
+  footer {
+    @include border(border-right);
+    position: relative;
+    top: -3px;
+    p {
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+.writer {
+  @include border(border-right);
+  @include border(border-bottom);
+}
+
+.developer {
+  @include border(border-left);
+  @include border(border-bottom);
+}
+
+.gap {
+  @include border(border-right);
+  height: 120px;
+  @media (max-width: $s) {
+    height: 150px;
+  }
+}
