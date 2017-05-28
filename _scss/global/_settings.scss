@@ -2,9 +2,17 @@ $max-width: 1200px;
 $base-px: 16px;
 $s: 800px;
 
+$accent: #0000B8;
+
+@mixin border($border) {
+  #{$border}: 3px solid $accent;
+}
+
 body {
   font-size: $base-px;
+  font-family: 'Chivo', sans-serif;
   color: #292929;
+  background-color: #FEE0E1;
   max-width: $max-width;
   margin: auto auto;
   padding: 5px 0;
