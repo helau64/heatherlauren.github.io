@@ -4,6 +4,8 @@ p {
 }
 
 a {
+  font-size: 1rem;
+  line-height: 1.4rem;
   color: $accent;
   font-weight: 700;
   text-decoration: none;
@@ -27,4 +29,8 @@ h2 {
   @media (max-width: $s) {
     font-size: 1.3rem;
   }
+}
+
+h3 {
+  font-style: italic;
 }
