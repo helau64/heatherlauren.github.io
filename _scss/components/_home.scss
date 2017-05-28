@@ -27,12 +27,6 @@
   }
   footer {
     @include border(border-right);
-    position: relative;
-    top: -3px;
-    p {
-      position: relative;
-      top: 3px;
-    }
   }
 }
 
