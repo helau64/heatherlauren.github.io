@@ -1,5 +1,9 @@
 html {
   height: 100%;
+  box-sizing: border-box;
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 }
 
 body {
@@ -50,4 +54,12 @@ body {
 footer {
   grid-area: footer;
   width: 100%;
+}
+
+.border {
+  margin: 0;
+  padding: 20px;
+  @media (max-width: $s) {
+    padding: 20px 10px;
+  }
 }
