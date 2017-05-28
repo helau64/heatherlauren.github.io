@@ -1,5 +1,6 @@
 .navbar {
   padding-top: 25px;
+  position: relative;
   ul li {
     padding: 10px;
   }
@@ -7,19 +8,71 @@
     display: none;
   }
   @media (max-width: $s) {
+    @include border(border-left);
+    height: 50px;
     ul {
+      border: solid 3px $accent;
       position: absolute;
-      width: 100%;
+      top: 60px;
+      left: 30px;
+      width: 75%;
       background-color: white;
+      opacity: 1;
+      z-index: 1;
+      padding: 1em;
+      a {
+        width: 100%;
+        display: block;
+        border: none;
+        padding-bottom: 1em;
+        user-select: none;
+        @include border(border-bottom);
+        &:hover, &:focus, &:active {
+          border-bottom: 3px solid #FF2F5D;
+        }
+      }
     }
     label, input {
       display: block;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      height: 30px;
+      width: 40px;
     }
-    input[type=checkbox] + ul {
+    label {
+      z-index: 1;
+      background-image: url('/assets/images/hamburger-dark.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+    input[type=checkbox] {
+      z-index: -1;
+      opacity: 0;
+    }
+    input[type=checkbox] ~ ul {
       visibility: hidden;
     }
-    input[type=checkbox]:checked + ul {
+    input[type=checkbox]:checked ~ ul {
       visibility: visible;
+    }
+    input[type=checkbox]:hover ~ label {
+      background-image: url('/assets/images/hamburger-light.svg');
+    }
+    input[type=checkbox]:focus ~ label {
+      background-image: url('/assets/images/hamburger-light.svg');
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+      @media (-webkit-min-device-pixel-ratio:0) {
+        outline: 5px auto -webkit-focus-ring-color;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    ul {
+      width: 85%;
     }
   }
 }
