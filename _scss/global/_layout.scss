@@ -10,6 +10,12 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  max-width: $max-width;
+  margin: auto auto;
+  padding: 5px 0;
+  @media (max-width: $max-width) {
+    padding: 5px 10px;
+  }
 }
 
 .grid-container {

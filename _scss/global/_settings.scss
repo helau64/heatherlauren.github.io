@@ -13,12 +13,6 @@ body {
   font-family: 'Chivo', sans-serif;
   color: #292929;
   background-color: #FEE0E1;
-  max-width: $max-width;
-  margin: auto auto;
-  padding: 5px 0;
-  @media (max-width: $max-width) {
-    padding: 5px 10px;
-  }
 }
 
 @mixin unlist() {
