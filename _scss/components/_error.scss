@@ -1,0 +1,7 @@
+.error-message {
+  h1 {
+    color: $accent;
+  }
+  @include border(border-left);
+  @include border(border-bottom);
+}
