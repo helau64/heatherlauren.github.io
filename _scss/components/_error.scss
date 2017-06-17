@@ -4,4 +4,16 @@
   }
   @include border(border-left);
   @include border(border-bottom);
+  @media (max-width: $s) {
+    position: fixed;
+    top: 0;
+    padding-top: 90px;
+  }
+}
+
+.not-found {
+  footer {
+    position: fixed;
+    top: 350px;
+  }
 }
