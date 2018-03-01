@@ -2,6 +2,7 @@
   h1 {
     @include border(border-left);
     color: $accent;
+    padding-bottom: 10px;
   }
   h2 {
     margin-top: 0;
@@ -27,12 +28,22 @@
   }
 }
 
-.writer {
+.first {
   @include border(border-right);
   @include border(border-bottom);
 }
 
-.developer {
+.second {
   @include border(border-left);
   @include border(border-bottom);
+}
+
+.me {
+  width: 100%;
+  max-width: 1500px;
+  filter: saturate(90%) blur(0.2px);
+  border: 30px solid #EDEDEE;
+  @media (max-width: $s) {
+    border-width: 20px;
+  }
 }
